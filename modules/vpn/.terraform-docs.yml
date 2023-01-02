@@ -1,0 +1,41 @@
+header-from: main.tf
+
+formatter: "markdown table"
+
+sort:
+  enabled: true
+  by: required
+
+content: |
+  # AWS VPN
+  This module will prepare an AWS VPN: 
+  
+  {{ .Inputs }}
+
+  {{ .Resources }}
+
+  ## How to create a documentation for the environent
+  To create a README file simply use the command:
+  ``` shell
+    make prepare-readme
+  ```
+
+  ## Wish to contribute?
+
+  You must install [**terraform-docs**](https://terraform-docs.io/user-guide/installation/).
+  Steps: 
+    * Clone this reop;
+    * Create a branch;
+    * Make all modifications you want;
+    * Create a documentation `make prepare-readme`;
+    * Commit your changes;
+    * Create a tag (v1.1.0, v1.2.3, etc), push your branch and raise a Pull Request.
+
+  <sub>For any questions simply reach me: [carlos.oliveira@softwareone.com](mailto:carlos.oliveira@softwareone.com)</sub>
+
+settings:
+  color: true
+  default: true
+  description: true
+  sensitive: true
+  type: true
